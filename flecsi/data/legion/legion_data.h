@@ -208,6 +208,8 @@ public:
     using namespace Legion;
     using namespace LegionRuntime;
     using namespace Arrays;
+    
+    printf("init color info map\n");
 
     for(auto & idx_space : indexed_coloring_info_map) {
       auto itr = sparse_info_map.find(idx_space.first);

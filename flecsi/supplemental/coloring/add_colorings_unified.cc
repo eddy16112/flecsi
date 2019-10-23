@@ -96,6 +96,9 @@ add_colorings_unified(coloring_map_t& map)
   
   dp.output_partition(vertices, vertex_primary, vertex_ghost, vertex_shared, vertex_exclusive);
   
+  MPI_Barrier(MPI_COMM_WORLD);
+  printf("done with dp\n");
+  
 //  dp.output_partition(edges, edge_primary, edge_ghost, edge_shared, edge_exclusive);
 }
 

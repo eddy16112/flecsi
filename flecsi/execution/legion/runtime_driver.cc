@@ -149,7 +149,7 @@ runtime_driver(const Legion::Task * task,
 
   // Invoke the specialization top-level task initialization function.
   specialization_tlt_init(args.argc, args.argv);
-  remap_shared_entities();
+  //remap_shared_entities(); //disable by Wei for DP
 
   context_.advance_state();  
 #endif // FLECSI_ENABLE_SPECIALIZATION_TLT_INIT

@@ -86,11 +86,14 @@ namespace topology {
 
     };
 
-template<size_t DIMENSION>
+template<size_t DIMENSION, typename REAL_TYPE = double>
 class mesh_definition_u : public mesh_definition_base__
 {
 public:
   using point_t = point_u<double, DIMENSION>;
+  
+  //! \brief the data type for connectivity
+  using connectivity_t = std::vector<std::vector<size_t>>;
 
   /// Default constructor
   mesh_definition_u() {}
